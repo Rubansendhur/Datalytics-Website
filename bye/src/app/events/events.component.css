@@ -1,0 +1,119 @@
+/* Main Container */
+.events-dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f4f4f9;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Dashboard Button */
+.btn-dashboard {
+  padding: 12px 24px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-dashboard:hover {
+  background-color: #0056b3;
+}
+
+/* Events Container */
+.events-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Events Grid */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Event Card */
+.event-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Event Title */
+.event-card h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Event Details */
+.event-card p {
+  font-size: 1rem;
+  color: #666;
+  margin: 5px 0;
+}
+
+.event-card .description {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+/* Event Image */
+.event-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* Delete Button */
+.btn-delete {
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #dc3545;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-delete:hover {
+  background-color: #c82333;
+}
+
+/* No Events Message */
+.no-events p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Error Message */
+.error-message {
+  color: #d9534f;
+  font-weight: bold;
+  margin-top: 20px;
+}

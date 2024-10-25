@@ -1,0 +1,51 @@
+<div class="user-container">
+  <!-- Insert New User Section -->
+  <div class="insert-user-section">
+    <h2>Insert New Club Member</h2>
+    <button (click)="toggleInsertUserForm()" class="toggle-button">
+      {{ isInsertUserFormVisible ? 'Cancel' : 'Add User' }}
+    </button>
+
+    <div *ngIf="isInsertUserFormVisible" class="insert-user-form">
+      <form (ngSubmit)="insertUser()">
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input type="text" [(ngModel)]="newUser.username" name="username" required />
+        </div>
+
+        <div class="form-group">
+          <label for="role">Role:</label>
+          <input type="text" [(ngModel)]="newUser.role" name="role" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" [(ngModel)]="newUser.email" name="email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="department">Department:</label>
+          <input type="text" [(ngModel)]="newUser.department" name="department" required />
+        </div>
+
+        <button type="submit" class="submit-button">Add User</button>
+      </form>
+    </div>
+
+    <!-- Error Message for Insert Form -->
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+  </div>
+
+  <!-- User List Section -->
+  <div class="user-list-section">
+    <h2>Admin List</h2>
+    <ul *ngIf="!errorMessage && users.length > 0" class="user-list">
+      <li *ngFor="let user of users" class="user-list-item">
+        <strong>Username:</strong> {{ user.username || 'N/A' }}<br />
+        <strong>Email:</strong> {{ user.email || 'N/A' }}<br />
+        <button (click)="deleteUser(user.id)" class="delete-button">Delete</button>
+      </li>
+    </ul>
+    <div *ngIf="!errorMessage && users.length === 0" class="no-users">No users found.</div>
+  </div>
+</div>

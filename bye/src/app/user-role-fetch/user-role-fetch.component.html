@@ -1,0 +1,22 @@
+<div class="user-role-container">
+  <h2>User Roles</h2>
+
+  <button (click)="navigateToDashboard()" class="dashboard-button">Go to Dashboard</button>
+
+  <!-- Error Message Section -->
+  <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+
+  <!-- User Roles List Section -->
+  <ul *ngIf="!errorMessage && users.length > 0" class="user-role-list">
+    <li *ngFor="let user of users" class="user-role-item">
+      <div><strong>Username:</strong> {{ user.username }}</div>
+      <div><strong>Email:</strong> {{ user.email }}</div>
+      <div><strong>Department:</strong> {{ user.department }}</div>
+      <div><strong>Role:</strong> {{ user.role }}</div>
+      <button (click)="deleteUser(user._id)" class="delete-button">Delete</button>
+    </li>
+  </ul>
+
+  <!-- No Users Found Message -->
+  <div *ngIf="!errorMessage && users.length === 0" class="no-users">No users found.</div>
+</div>

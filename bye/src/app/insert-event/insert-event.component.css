@@ -1,0 +1,109 @@
+/* Main Container */
+.insert-event {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    background-color: #f4f4f9;
+    min-height: 100vh;
+  }
+  
+  /* Button Styling */
+  .insert-event button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .insert-event button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Form Wrapper */
+  .insert-event form {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .insert-event h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Form Inputs */
+  .insert-event label {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+  }
+  
+  .insert-event input[type="text"],
+  .insert-event input[type="date"],
+  .insert-event input[type="file"],
+  .insert-event textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+  }
+  
+  .insert-event input[type="text"]:focus,
+  .insert-event input[type="date"]:focus,
+  .insert-event textarea:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  .insert-event textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  .insert-event button[type="submit"] {
+    background-color: #28a745;
+  }
+  
+  .insert-event button[type="submit"]:hover {
+    background-color: #218838;
+  }
+  
+  /* Success & Error Messages */
+  .success-message, .error-message {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 500px;
+  }
+  
+  .success-message {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+  }
+  
+  .error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+  }
+  

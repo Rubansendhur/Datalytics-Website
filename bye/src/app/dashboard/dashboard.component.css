@@ -1,0 +1,73 @@
+/* Dashboard Container */
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Header Section */
+  .dashboard-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .dashboard-header h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .dashboard-header p {
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
+  /* Actions Section */
+  .dashboard-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+  }
+  
+  /* Action Buttons */
+  .btn-action {
+    padding: 15px 25px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .btn-action:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+  }
+  
+  /* Logout Button */
+  .btn-logout {
+    padding: 15px 25px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+    background-color: #dc3545;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .btn-logout:hover {
+    background-color: #c82333;
+    transform: translateY(-3px);
+  }
+  

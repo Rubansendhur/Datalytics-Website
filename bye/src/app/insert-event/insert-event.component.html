@@ -1,0 +1,40 @@
+<div class="insert-event">
+  <button (click)="toggleFormVisibility()">Add Event</button>
+  
+  <button (click)="navigateToDashboard()">Go to Dashboard</button>
+  <div *ngIf="showForm">
+    <h2>Insert Event</h2>
+    
+    <form (ngSubmit)="onSubmit()">
+      <div>
+        <label for="eventName">Event Name:</label>
+        <input type="text" id="eventName" [(ngModel)]="event.eventName" name="eventName" required />
+      </div>
+      
+      <div>
+        <label for="eventDate">Event Date:</label>
+        <input type="date" id="eventDate" [(ngModel)]="event.eventDate" name="eventDate" required />
+      </div>
+
+      <div>
+        <label for="eventLocation">Event Location:</label>
+        <input type="text" id="eventLocation" [(ngModel)]="event.eventLocation" name="eventLocation" required />
+      </div>
+
+      <div>
+        <label for="description">Description:</label>
+        <textarea id="description" [(ngModel)]="event.description" name="description" required></textarea>
+      </div>
+
+      <div>
+        <label for="image">Upload Image:</label>
+        <input type="file" (change)="onFileSelected($event)" accept="image/*" />
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+    
+    <div *ngIf="successMessage" class="success-message">{{ successMessage }}</div>
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+  </div>
+</div>

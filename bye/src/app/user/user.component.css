@@ -1,0 +1,133 @@
+/* Container for the entire user component */
+.user-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Section styling */
+.insert-user-section,
+.user-list-section {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.insert-user-section h2,
+.user-list-section h2 {
+  color: #333;
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+/* Form styling */
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+label {
+  font-weight: bold;
+  color: #333;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+
+/* Buttons */
+.toggle-button,
+.submit-button,
+.delete-button {
+  padding: 10px 15px;
+  font-size: 0.9em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-button {
+  background-color: #007bff;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.toggle-button:hover {
+  background-color: #0056b3;
+}
+
+.submit-button {
+  background-color: #4caf50;
+  color: white;
+  width: 100%;
+}
+
+.submit-button:hover {
+  background-color: #45a049;
+}
+
+.delete-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #d32f2f;
+}
+
+/* User List */
+.user-list {
+  list-style: none;
+  padding: 0;
+}
+
+.user-list-item {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.user-list-item:last-child {
+  border-bottom: none;
+}
+
+.no-users {
+  color: #555;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+/* Error and Success Messages */
+.error-message {
+  color: #f44336;
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+
+.success-message {
+  color: #4caf50;
+  font-size: 0.9em;
+  margin-top: 10px;
+}

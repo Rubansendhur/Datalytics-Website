@@ -1,0 +1,24 @@
+<div class="events-dashboard">
+  <button (click)="navigateTodashboard()" class="btn-dashboard">Go to Dashboard</button>
+
+  <div class="events-container">
+    <div *ngIf="eventsLoaded && events.length > 0" class="events-grid">
+      <div *ngFor="let event of events; trackBy: trackByEventId" class="event-card">
+        <h3>{{ event.eventName }}</h3>
+        <p><strong>Date:</strong> {{ event.eventDate }}</p>
+        <p><strong>Location:</strong> {{ event.eventLocation }}</p>
+        <p class="description">{{ event.description }}</p>
+        <img *ngIf="event.imageBase64" [src]="event.imageBase64" alt="Event Image" class="event-image" />
+        <button (click)="deleteEvent(event._id)" class="btn-delete">Delete</button>
+      </div>
+    </div>
+
+    <div *ngIf="eventsLoaded && events.length === 0" class="no-events">
+      <p>No events found.</p>
+    </div>
+
+    <div *ngIf="errorMessage" class="error-message">
+      <p>{{ errorMessage }}</p>
+    </div>
+  </div>
+</div>
