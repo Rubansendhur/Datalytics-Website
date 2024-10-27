@@ -62,6 +62,13 @@ const userRoleSchema = new mongoose.Schema({
 
 const UserRole = mongoose.model('UserRole', userRoleSchema);
 
+const corsOptions = {
+  origin: ['http://localhost:4200','https://datalyticscit.vercel.app/'], // or your actual localhost URL and port
+  optionsSuccessStatus: 200,
+};
+app.use(cors(corsOptions));
+
+
 // Signup Route
 app.post('/api/signup', async (req, res) => {
   const { username, email, password } = req.body;
