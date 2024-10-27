@@ -27,7 +27,7 @@ export class AboutusComponent {
   }
 
   fetchUsers(): void {
-    const apiUrl = 'http://localhost:5000/api/users'; // Replace with your actual API URL
+    const apiUrl = 'https://datalytics-website.onrender.com/api/users'; // Replace with your actual API URL
 
     this.http.get<{ message: string; users: User[] }>(apiUrl).subscribe({
       next: (data) => {
