@@ -35,7 +35,7 @@ export class LoginComponent {
     };
 
     // Send POST request to the backend (replace with your actual API endpoint)
-    this.http.post('http://localhost:5000/api/login', loginPayload).subscribe({
+    this.http.post('https://datalytics-website.onrender.com/api/login', loginPayload).subscribe({
       next: (response: any) => {
         // Simulating successful login by checking for success message from API
         if (response && response.message === 'Login successful') {
