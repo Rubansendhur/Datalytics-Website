@@ -32,7 +32,7 @@ export class ContactusComponent implements OnInit {
   }
 
   fetchUsers(): void {
-    const apiUrl = 'https://datalytics-website.onrender.com//api/userRoles'; // API URL for fetching user roles
+    const apiUrl = 'https://datalytics-website.onrender.com/api/userRoles'; // API URL for fetching user roles
 
     this.http.get<{ message: string; userRoles: User[] }>(apiUrl).subscribe({
       next: (data) => {
