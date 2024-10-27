@@ -45,7 +45,7 @@ export class SignupComponent {
       console.log('Submitted Data:', this.submittedData);
 
       // Send data to the backend
-      this.http.post('http://localhost:5000/api/signup', this.submittedData)
+      this.http.post('https://datalytics-website.onrender.com/api/signup', this.submittedData)
         .subscribe({
           next: (response: any) => {
             console.log('Response from server:', response); // Log response from server
