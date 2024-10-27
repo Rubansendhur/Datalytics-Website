@@ -1,0 +1,11 @@
+{
+  "routes": [
+    "/dashboard",
+    "/EventComponent",
+    "/InsertEventComponent",
+    "/login",
+    "/signup",
+    "/UserComponent",
+    "/UserRoleFetchComponent"
+  ]
+}
