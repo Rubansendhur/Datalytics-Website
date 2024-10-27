@@ -60,7 +60,7 @@ export class HomeComponent implements OnInit {
   }
 
   fetchEvents() {
-    this.http.get<EventApiResponse>('http://localhost:5000/api/events')  // Replace with your backend API URL
+    this.http.get<EventApiResponse>('https://datalytics-website.onrender.com//api/events')  // Replace with your backend API URL
       .subscribe(
         (response) => {
           const today = new Date();
@@ -78,7 +78,7 @@ export class HomeComponent implements OnInit {
   }
 
   fetchTeam() {
-    this.http.get<UserRoleApiResponse>('http://localhost:5000/api/userRoles')  // Replace with your backend API URL
+    this.http.get<UserRoleApiResponse>('https://datalytics-website.onrender.com//api/userRoles')  // Replace with your backend API URL
       .subscribe(
         (response) => {
           if (response && Array.isArray(response.userRoles)) {

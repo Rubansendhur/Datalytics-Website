@@ -23,7 +23,7 @@ export class EventsComponent implements OnInit {
   }
 
   fetchEvents(): void {
-    this.http.get<{ message: string; events: any[] }>('http://localhost:5000/api/events')
+    this.http.get<{ message: string; events: any[] }>('https://datalytics-website.onrender.com//api/events')
       .subscribe(
         (response) => {
           console.log('Fetched events:', response.events); // Log the fetched events
