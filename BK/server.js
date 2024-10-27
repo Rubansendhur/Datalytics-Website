@@ -63,7 +63,7 @@ const userRoleSchema = new mongoose.Schema({
 const UserRole = mongoose.model('UserRole', userRoleSchema);
 
 const corsOptions = {
-  origin: ['http://localhost:4200','https://datalyticscit.vercel.app/'], // or your actual localhost URL and port
+  origin: ['http://localhost:4200','https://datalyticscit.vercel.app/','https://datalyticsadmin.vercel.app/'], // or your actual localhost URL and port
   optionsSuccessStatus: 200,
 };
 app.use(cors(corsOptions));
