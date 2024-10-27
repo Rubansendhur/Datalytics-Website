@@ -1,7 +1,7 @@
 {
   "builds": [
     {
-      "src": "dist/fr/**",
+      "src": "dist/fr/index.html",
       "use": "@vercel/static"
     }
   ],
